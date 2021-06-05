@@ -48,7 +48,7 @@ export default function Categories({navigation}) {
     return (
       
         <View>
-
+              <Button title='Add Category' onPress = {() => navigation.navigate('Add Category')}/>
                 {
                     categories.map((item) => (
 
@@ -58,7 +58,7 @@ export default function Categories({navigation}) {
                                 <ListItem.Subtitle>{item.description}</ListItem.Subtitle>
                                 <ListItem.Subtitle>{item.id}</ListItem.Subtitle>
 
-                                <Button title='Add Category' onPress = {() => navigation.navigate('PostCategory')}/>                                        
+                                                                      
 
                                 <Icon name='delete' onPress= {() => deleteCategory(item.id)}/>
 
