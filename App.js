@@ -7,6 +7,7 @@ import Products from './Products';
 import Categories from './Categories';
 import Orders from './Orders';
 import {Home} from './Home';
+import PostCategory from './PostCategory';
 
 
 
@@ -22,7 +23,8 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Products" component={Products} />
         <Stack.Screen name="Categories" component={Categories} />
-        <Stack.Screen name="Orders" component={Orders} />   
+        <Stack.Screen name="Orders" component={Orders} />
+        <Stack.Screen name="PostCategory" component={PostCategory} />   
       </Stack.Navigator>
     </NavigationContainer>
   

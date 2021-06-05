@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { InteractionManager } from 'react-native';
+import { InteractionManager, Button, TouchableOpacity } from 'react-native';
 import { View, Text } from 'react-native';
 import { ListItem, Icon } from 'react-native-elements'
 
-export default function Categories() {
+export default function Categories({navigation}) {
 
     const [categories, setCategories] = useState([]);
 
@@ -57,6 +57,8 @@ export default function Categories() {
                                 <ListItem.Title>{item.name}</ListItem.Title>
                                 <ListItem.Subtitle>{item.description}</ListItem.Subtitle>
                                 <ListItem.Subtitle>{item.id}</ListItem.Subtitle>
+
+                                <Button title='Add Category' onPress = {() => navigation.navigate('PostCategory')}/>                                        
 
                                 <Icon name='delete' onPress= {() => deleteCategory(item.id)}/>
 
